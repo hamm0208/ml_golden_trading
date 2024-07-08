@@ -13,23 +13,23 @@ import {
 export const navLinks = [
     {
         id: "procedure",
-        tittle: "How it works",
+        title: "How it works",
     },
     {
         id: "benefits",
-        tittle: "Benefits",
+        title: "Benefits",
     },
     {
         id: "aboutus",
-        tittle: "About Us",
+        title: "About Us",
     },
     {
         id: "whyus",
-        tittle: "Why Us?",
+        title: "Why Us?",
     },
     {
         id: "ordernow",
-        tittle: "Order Now",
+        title: "Order Now",
     }
 ]
 
