@@ -16,12 +16,15 @@ const Navbar = () => {
   
   //The useEffect hook is used to set up a media query listener that triggers a callback function whenever the screen width changes.
   useEffect(()=>{
+    //Sets the minimum width to trigger the callback function
     const mediaQuery = window.matchMedia('(min-width:768px)')
     const handleMediaQueryChange = (event) =>{
       if(event.matches){
         setToggle(false)
       }
     }
+
+    
     mediaQuery.addEventListener('change', handleMediaQueryChange);
 
     // Clean up the listener on component unmount
