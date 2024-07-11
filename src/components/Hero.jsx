@@ -22,8 +22,8 @@ const Hero = () => {
               Explore Now
           </a>
         </div>
-        <div className='bg-white lg:w-2/5 w-full'>
-          test
+        <div className='h-full lg:w-2/5 w-full'>
+          <Product1Canvas/>
         </div>
       </div>
     </section>
