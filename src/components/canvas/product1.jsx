@@ -1,53 +1,64 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Suspense, useEffect, useState } from 'react';
-import { Canvas } from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
 
-const Product1 = () => {
-  const { scene } = useGLTF('./product1/product1.gltf', true);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    window.addEventListener('resize', handleResize);
-    handleResize(); // Check initial screen size
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  if (!scene) {
-    console.error('Failed to load GLTF file');
-    return null;
-  }
-
-  console.log('GLTF file loaded successfully', scene);
+const Product1 = ({ isMobile }) => {
+  const { scene } = useGLTF('./product1_final/product1.gltf', true);
+  const meshRef = useRef();
+  
+  useFrame((state, delta) => {
+    if (meshRef.current) {
+      meshRef.current.rotation.y += delta * 0.5; // Adjust the rotation speed as needed
+    }
+  });
 
   return (
     <mesh>
-      <hemisphereLight intensity={5.35} groundColor="black" />
-      <pointLight rotation={[0,0,0]} shadow={true}/>
+      <pointLight intensity={100} rotation={[0, 0, 0]} position={[0,10, 5]} />
+      <pointLight intensity={100} rotation={[0, 0, 0]} position={[0,0, 5]} />
+      <pointLight intensity={100} rotation={[0, 0, 0]} position={[0, 0, -5]} />
+      <pointLight intensity={250} rotation={[0, 0, 0]} position={[5, 0, 0]} />
+      <pointLight intensity={100} rotation={[0, 0, 0]} position={[-10, 0, 0]} />
       <primitive
+        ref={meshRef}
         object={scene}
-        position={[0,-1.1, 0]}
-        scale={6}
-        rotation={[0,0.5,0]}
+        position={isMobile?[0, -1.5, 0] :[0, -3, 0]}
+        scale={isMobile? 9:10}
+        rotation={[0, 0.5, 0]}
       />
     </mesh>
   );
 };
 
 const Product1Canvas = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 1023px)');
+    setIsMobile(mediaQuery.matches);
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+    mediaQuery.addEventListener('change', handleMediaQueryChange);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleMediaQueryChange);
+    };
+  }, []);
+
   return (
-    <Canvas frameLoop='demand' shadows camera={{ position: [20, 10, 5], fov: 25 }} gl={{ preserveDrawingBuffer: true }}>
+    <Canvas frameLoop='demand' shadows camera={{ position: [20, 10, 5], fov: 40 }} gl={{ preserveDrawingBuffer: true }}>
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 4} />
-        <Product1 />
+        <OrbitControls
+          key={isMobile ? 'mobile' : 'desktop'}
+          enableZoom={false}
+          enableRotate={!isMobile}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 4}
+        />
+        <Product1 isMobile={isMobile} />
       </Suspense>
       <Preload all />
     </Canvas>

@@ -11,3 +11,13 @@
     font-family: "alibaba-sans", sans-serif;
     scroll-behavior: smooth;
 }
+.home{
+    background-color: rgba(0, 0, 0, 0.502);
+    
+}
+.product{
+    z-index: 0;
+}
+.landing{
+    z-index: 1;
+}
