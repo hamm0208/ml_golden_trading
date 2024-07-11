@@ -2,7 +2,9 @@ import React from 'react'
 
 const Procedure = () => {
   return (
-    <div>Procedure</div>
+    <div className='h-screen'>
+      Procedure
+    </div>
   )
 }
 
