@@ -51,7 +51,7 @@ const Navbar = () => {
   
 
   return (
-    <nav className={`w-full flex-items-center py-5 fixed top-0 z-20 bg-primary`}>
+    <nav className={`w-full flex-items-center py-5  top-0 z-20 bg-primary`}>
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <div className='flex justify-center items-center mr-5 md:w-60 w-full '>
           <Link 
@@ -72,7 +72,8 @@ const Navbar = () => {
                   key={link.id}
                   className={`
                     ${active === link.title ? "text-secondary" : "text-white"} 
-                    hover:text-secondary 
+                    hover:text-secondary
+                    transition duration-300 
                     text-[15px] lg:text-[20px]
                     font-medium cursor-pointer mx-6
                   `}
