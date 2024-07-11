@@ -31,12 +31,12 @@ const Product1 = () => {
   return (
     <mesh>
       <hemisphereLight intensity={5.35} groundColor="black" />
-      <pointLight intensity={100} rotation={[0,0,0]} shadow={true}/>
+      <pointLight rotation={[0,0,0]} shadow={true}/>
       <primitive
         object={scene}
         position={[0,-1.1, 0]}
         scale={6}
-        rotation={[0.2,0.5,-0.2]}
+        rotation={[0,0.5,0]}
       />
     </mesh>
   );
@@ -44,7 +44,7 @@ const Product1 = () => {
 
 const Product1Canvas = () => {
   return (
-    <Canvas frameLoop='demand' shadows camera={{ position: [20, 3, 5], fov: 25 }} gl={{ preserveDrawingBuffer: true }}>
+    <Canvas frameLoop='demand' shadows camera={{ position: [20, 10, 5], fov: 25 }} gl={{ preserveDrawingBuffer: true }}>
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 4} />
         <Product1 />
