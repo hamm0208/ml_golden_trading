@@ -4,6 +4,17 @@ import {navLinks} from '../constants'
 import { Product1Canvas } from './canvas'
 const Hero = () => {
   const [active, setActive] = useState("")
+  const handleNavClick = (event, link) => {
+    event.preventDefault(); // Prevent the default anchor click behavior
+    setActive(link.title);
+
+    const element = document.getElementById(link.id);
+    if (element) {
+      const yOffset = -100; // Adjust this value to set the offset
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
 
   return (
     <section className='relative w-full h-screen mx-auto'>
@@ -18,7 +29,7 @@ const Hero = () => {
           <p className='text-center lg:mt-18 my-12 lg:text-3xl text-white'>
           Revolutionize your projects with <span className='text-secondary font-bold'>ML GOLDEN TRADING</span> , through our patented groundbreaking <span className='text-secondary'>self-leveling cement screeding</span> screeding and <span className='text-secondary'>cement mortar screeding systems</span> . Trusted by contractors for unparalleled precision and efficiency.
           </p>
-          <a class="bg-white hover:bg-zinc-300 transition duration-500 text-black cursor-pointer font-bold py-5 px-7 xl:mt-20 rounded-full" key={navLinks[0].id} href={`#${navLinks[0].id}`} onClick={()=>setActive(navLinks[0].title)}>
+          <a class="bg-white hover:bg-zinc-300 transition duration-500 text-black cursor-pointer font-bold py-5 px-7 xl:mt-20 rounded-full" key={navLinks[0].id} href={`#${navLinks[0].id}`} onClick={(event)=>handleNavClick(event,navLinks[0])}>
               Explore Now
           </a>
         </div>

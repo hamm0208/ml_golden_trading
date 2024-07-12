@@ -49,6 +49,17 @@ const Navbar = () => {
     };
   }, [sidebarRef]);
   
+  const handleNavClick = (event, link) => {
+    event.preventDefault(); // Prevent the default anchor click behavior
+    setActive(link.title);
+
+    const element = document.getElementById(link.id);
+    if (element) {
+      const yOffset = -100; // Adjust this value to set the offset
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
 
   return (
     <nav className={`w-full flex-items-center py-5  fixed top-0 z-50 bg-primary`}>
@@ -77,7 +88,7 @@ const Navbar = () => {
                     text-[15px] lg:text-[20px]
                     font-medium cursor-pointer mx-6
                   `}
-                  onClick={() => setActive(link.title)}
+                  onClick={(event) => handleNavClick(event, link)}
                 >
                   <a href={`#${link.id}`}>{link.title}</a>
                 </li>
@@ -95,10 +106,10 @@ const Navbar = () => {
                       active === link.title? "text-secondary" : "text-black" 
                     } font-medium text-[20px] cursor-pointer hover:text-secondary`
                     } 
-                    onClick={()=>
+                    onClick={(event)=>
                     {
                       setToggle(!toggle)
-                      setActive(link.title)
+                      handleNavClick(event, link)
                     }
                     }>
                       <a href={`#${link.id}`}>{link.title}</a>
