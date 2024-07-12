@@ -13,12 +13,39 @@ const Procedure = () => {
           <p className='text-xl w-3/4'>The operator only needs to use an electric drill and two screws to lock down the framework on the ground</p>
           <br />
           <h3 className='text-2xl font-bold'>Flat Floor System Process</h3>
-          <br />
-          <div className='flex-col flex bg-primary rounded-2xl p-3'>
-            <div className='flex-row flex '>
-              <div className='m-3 p-14 w-h-22 h-22 rounded-2xl bg-secondary'>{procedure[0].instruction}</div>
-              <div className='m-3 p-14 w-h-22 h-22 rounded-2xl bg-[#DADBDD]'>{procedure[1].instruction}</div>
-              <div className='m-3 p-14 w-h-22 h-22 rounded-2xl bg-white'>{procedure[2].instruction}</div>
+          <div className='flex flex-col rounded-2xl w-1/2 p-3 mt-3 bg-primary'>
+            <div className='flex flex-row'>
+              <div className='text-xl m-3 p-10 flex-1 rounded-2xl bg-secondary text-center flex justify-center items-center'>
+                {procedure[0].processNo + ". " + procedure[0].instruction}
+              </div>
+              <div className='text-xl m-3 p-10 flex-1 rounded-2xl bg-[#DADBDD] text-center flex justify-center items-center'>
+                {procedure[1].processNo + ". " + procedure[1].instruction}
+              </div>
+              <div className='text-xl m-3 p-10 flex-1 rounded-2xl bg-white text-center flex justify-center items-center'>
+                {procedure[2].processNo + ". " + procedure[2].instruction}
+              </div>
+            </div>
+            <div className='flex flex-row'>
+              <div className='text-xl m-3 p-10 flex-1 rounded-2xl bg-white text-center flex justify-center items-center'>
+                {procedure[3].processNo + ". " + procedure[3].instruction}
+              </div>
+              <div className='text-xl m-3 p-10 flex-1 rounded-2xl bg-secondary  text-center flex justify-center items-center'>
+                {procedure[4].processNo + ". " + procedure[4].instruction}
+              </div>
+              <div className='text-xl m-3 p-10 flex-1 rounded-2xl bg-[#DADBDD] text-center flex justify-center items-center'>
+                {procedure[5].processNo + ". " + procedure[5].instruction}
+              </div>
+            </div>
+            <div className='flex flex-row'>
+              <div className='text-xl m-3 p-10 flex-1 rounded-2xl bg-white text-center flex justify-center items-center'>
+                {procedure[6].processNo + ". " + procedure[6].instruction}
+              </div>
+              <div className='text-xl m-3 p-10 flex-1 rounded-2xl bg-[#DADBDD] text-center flex justify-center items-center'>
+                {procedure[7].processNo + ". " + procedure[7].instruction}
+              </div>
+              <div className='text-xl m-3 p-10 flex-1 rounded-2xl bg-secondary text-center flex justify-center items-center'>
+                {procedure[8].processNo + ". " + procedure[8].instruction}
+              </div>
             </div>
           </div>
         </div>
