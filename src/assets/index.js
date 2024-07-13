@@ -9,6 +9,7 @@ import nature from "./nature.svg";
 import time from "./time.svg";
 import background_mobile from "./background_mobile.png";
 import background_procedure from "./procedure_bg.svg";
+import demo_vid from "./demo.mp4";
 
 
 
@@ -24,5 +25,6 @@ export {
   save_cost,
   manpower,
   nature,
-  time
+  time,
+  demo_vid
 };

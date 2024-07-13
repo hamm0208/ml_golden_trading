@@ -27,7 +27,7 @@
 }
 
 .blob-container{
-    position: relative;
+    position: absolute;
     width: 100%;   
     height: 100%;
     z-index: -2;
@@ -40,4 +40,7 @@
 }
 .procedure_blob_mobile{
     background-image: url("./assets/procedure_bg_mobile.svg");
+}
+.procedure{
+    z-index: -2;
 }
