@@ -18,18 +18,18 @@ const Hero = () => {
 
   return (
     <section className='relative w-full h-screen mx-auto'>
-      <div className={`absolute inset-0 lg:top-[180px] top-[150px] mx-auto flex lg:flex-row flex-col items-start gap-10`}>
+      <div className={`absolute inset-0 lg:top-[180px] sm:top-[150px] top-[50px] mx-auto flex lg:flex-row flex-col items-start gap-10`}>
         <div className='lg:w-5/6 w-full flex flex-col justify-center items-center lg:bg-transparent home p-6 mt-32 rounded-xl landing'>
-          <h1 className='text-white text-[25px] lg:text-5xl text-center'>
+          <h1 className='text-white text-[25px] xl:text-5xl text-center'>
             Transform Your Ground Leveling with our <br/>
-            <span className='text-secondary text-[25px] lg:text-6xl'>
+            <span className='text-secondary text-[25px] xl:text-5xl'>
               Flat Floor System
             </span>
           </h1>
-          <p className='text-center lg:mt-18 my-12 lg:text-3xl text-white'>
+          <p className='text-center lg:mt-18 my-12 xl:text-3xl text-white'>
           Revolutionize your projects with <span className='text-secondary font-bold'>ML GOLDEN TRADING</span> , through our patented groundbreaking <span className='text-secondary'>self-leveling cement screeding</span> screeding and <span className='text-secondary'>cement mortar screeding systems</span> . Trusted by contractors for unparalleled precision and efficiency.
           </p>
-          <a class="bg-white hover:bg-zinc-300 transition duration-500 text-black cursor-pointer font-bold py-5 px-7 xl:mt-16 rounded-full" key={navLinks[0].id} href={`#${navLinks[0].id}`} onClick={(event)=>handleNavClick(event,navLinks[0])}>
+          <a class="bg-white hover:bg-zinc-300 transition duration-500 text-black cursor-pointer font-bold py-5 px-7 rounded-full" key={navLinks[0].id} href={`#${navLinks[0].id}`} onClick={(event)=>handleNavClick(event,navLinks[0])}>
               Explore Now
           </a>
         </div>
