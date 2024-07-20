@@ -6,15 +6,15 @@ import {demo_vid} from "../assets"
 const Procedure = () => {
   return (
     <section className='relative w-full h-full lg:mb-40 3xl:mb-20 xl:mb-40 mb-14 procedure '>
-      <div className={`p-14 flex 3xl:flex-row flex-col relative inset-0 lg:top-[200px] xl:top-[180px] 2xl:top-[150px] 3xl:top-[80px] top-[35px] items-center`}>
-        <div className='3xl:text-left text-center 2xl:w-full flex flex-col 3xl:justify-start 3xl:items-start justify-center items-center'>
+      <div className={`p-14 flex 2xl:flex-row flex-col relative inset-0 lg:top-[200px] xl:top-[180px] 2xl:top-[150px] 3xl:top-[80px] top-[35px] items-center`}>
+        <div className='2xl:text-left text-center 2xl:w-full flex flex-col 2xl:justify-start 2xl:items-start justify-center items-center'>
           <h2 className='text-5xl lilita'>How It <span className= 'lilita text-secondary '>Works!</span></h2>
           <br />
           <h3 className='text-2xl font-bold'>Simple Installation</h3>
           <p className='text-xl w-3/4'>The operator only needs to use an electric drill and two screws to lock down the framework on the ground</p>
           <br />
           <h3 className='text-2xl font-bold'>Flat Floor System Process</h3>
-            <div className='flex flex-col rounded-2xl 3xl:w-3/4 justify-items-center p-3 mt-3 bg-primary'>
+            <div className='flex flex-col rounded-2xl 2xl:w-3/4 justify-items-center p-3 mt-3 bg-primary'>
               <div className='flex sm:flex-row flex-col'>
                 <div className='sm:m-2 mt-5 sm:mx-3 md:text-lg sm:text-sm text-md p-2 w-full h-40 lg:h-52 lg:w-42 flex-1 rounded-2xl bg-secondary text-center flex justify-center items-center'>
                   {procedure[0].processNo + ". " + procedure[0].instruction}
@@ -50,9 +50,9 @@ const Procedure = () => {
               </div>
             </div>
         </div>
-        <div className='bg-primary rounded-xl p-8 pt-2 my-5'>
+        <div className='bg-primary rounded-xl p-8 pt-2 my-10 justify-center'>
           <h2 className='text-white text-2xl text-center mb-3 '>Example:</h2>
-          <video src={demo_vid} autoPlay loop muted controls className='w-full h-auto'>
+          <video src={demo_vid} autoPlay loop muted controls className='md:w-1/2 2xl:w-full w-full mx-auto'>
             Your browser does not support the video tag.
           </video>
         </div>
