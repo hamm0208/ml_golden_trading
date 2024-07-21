@@ -5,7 +5,7 @@ import {demo_vid} from "../assets"
 
 const Procedure = () => {
   return (
-    <section className='relative w-full h-full lg:mb-40 3xl:mb-20 xl:mb-40 mb-14 procedure '>
+    <section className='relative w-full h-full lg:mb-40 3xl:mb-20 xl:mb-40 mb-0 procedure '>
       <div className={`p-14 flex 2xl:flex-row flex-col relative inset-0 lg:top-[200px] xl:top-[180px] 2xl:top-[150px] 3xl:top-[80px] top-[35px] items-center`}>
         <div className='2xl:text-left text-center 2xl:w-full flex flex-col 2xl:justify-start 2xl:items-start justify-center items-center'>
           <h2 className='text-5xl lilita'>How It <span className= 'lilita text-secondary '>Works!</span></h2>
@@ -50,7 +50,7 @@ const Procedure = () => {
               </div>
             </div>
         </div>
-        <div className='bg-primary rounded-xl p-8 pt-2 my-10 justify-center'>
+        <div className='bg-primary rounded-xl p-8 pt-2 my-10 justify-center sm:top-[100px] xl:relative'>
           <h2 className='text-white text-2xl text-center mb-3 '>Example:</h2>
           <video src={demo_vid} autoPlay loop muted controls className='md:w-1/2 2xl:w-full w-full mx-auto'>
             Your browser does not support the video tag.

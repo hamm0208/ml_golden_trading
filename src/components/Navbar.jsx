@@ -100,7 +100,7 @@ const Navbar = () => {
                 <img src={toggle? close: menu} alt="menu" className="w-[28px] h-[28px] object-contain cursor-pointer " onClick={()=>setToggle(!toggle)} />
             </div>
             <div  className = {`${!toggle? 'hidden' : 'flex'} p-6 bg-zinc-500 absolute top-0 h-screen right-0 w-1/2 min-w[140px] z-10 rounded-xl`}>
-              <ul className='list-none flex items-start flex-col gap-4'>
+              <ul className='list-none flex items-start flex-col gap-4 mt-10'>
                   {navLinks.map((link) =>(
                     <li key={link.id} className={`${
                       active === link.title? "text-secondary" : "text-black" 
