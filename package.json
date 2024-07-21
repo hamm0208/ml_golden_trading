@@ -2,7 +2,7 @@
   "homepage":"http://hamm0208.github.io/ml_golden_trading",
   "name": "ml-golden-trading-website",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
