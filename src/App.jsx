@@ -29,7 +29,10 @@ const App = () => {
       <div className={`blob-container ${isMobile ? 'procedure_blob_mobile' : 'procedure_blob'}`} id='procedure'>
       </div>
         <Procedure/>
+        <hr />
+      <div id='benefits'>
         <Benefits/>
+      </div>
         <AboutUs/>
         <WhyUs/>
         <Order/>
