@@ -50,7 +50,7 @@ const Procedure = () => {
               </div>
             </div>
         </div>
-        <div className='bg-primary rounded-xl p-8 pt-2 my-10 justify-center sm:top-[100px] xl:relative'>
+        <div className='bg-primary rounded-xl p-8 pt-2 my-10 justify-center 3xl:top-[100px] xl:relative'>
           <h2 className='text-white text-2xl text-center mb-3 '>Example:</h2>
           <video src={demo_vid} autoPlay loop muted controls className='md:w-1/2 2xl:w-full w-full mx-auto'>
             Your browser does not support the video tag.

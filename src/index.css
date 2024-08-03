@@ -44,3 +44,8 @@
 .procedure{
     z-index: -2;
 }
+.timeline{
+    width: 2px;
+    background-color: #DEB140;
+    height: 100px;
+}
