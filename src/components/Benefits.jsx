@@ -5,19 +5,18 @@ const Benefits = () => {
   return (
     <section>
       <div className='relative w-full h-full lg:mb-40 3xl:mb-20 xl:mb-40 mb-14 z-0 benefits mt-5 bg-primary p-10'>
-        <div className='px-14 '>
           <div className='2xl:text-left  2xl:w-full flex flex-col 2xl:justify-start 2xl:items-start justify-center items-center'>
             <h2 className='text-5xl lilita text-secondary'>Benefits</h2>
             <h3 className='text-2xl lilita text-white'>How can we help you?</h3>
           </div>
-          <div className='flex justify-center items-center mt-8 border p-10 rounded-md'>
+          <div className='flex justify-center items-center mt-8 md:border md:p-10 md:rounded-md'>
             <div className='max-w-7xl mx-auto w-full  grid-cols-9 md:grid hidden'>
               {benefits.map((benefit, index) =>(
                 <React.Fragment key={index}>
                   {index % 2 === 0 ? 
                   (<>
                   <div className='col-span-4 w-full h-full'>
-                    <div className='w-full h-full bg-tertiary rounded-md p-4 md:pl-4'>
+                    <div className='w-full h-full bg-secondary rounded-md p-4 md:pl-4'>
                       <h3 className='text-xl py-2 font-bold'>{benefit.benefits}</h3>
                       <p className='sm:text-sm text-xs '>{benefit.explaination}</p>
                     </div>
@@ -36,7 +35,7 @@ const Benefits = () => {
                     <img src={benefit.icon} alt={benefit.benefits} className='absolute bg-slate-800 p-3 rounded-full'/>
                   </div>
                   <div className='col-span-4 w-full h-full'>
-                    <div className='w-full h-full bg-tertiary rounded-md p-4 md:pl-4'>
+                    <div className='w-full h-full bg-secondary rounded-md p-4 md:pl-4'>
                       <h3 className='text-xl font-bold py-2'>{benefit.benefits}</h3>
                       <p className='sm:text-sm text-xs'>{benefit.explaination}</p>
                     </div>
@@ -56,7 +55,7 @@ const Benefits = () => {
                   <div className='col-span-3 w-full h-full py-3'>
                     <div className='w-full h-full bg-secondary p-3 md:pl-4 rounded-md'>
                       <h3 className='text-xl font-bold py-2'>{benefit.benefits}</h3>
-                      <p className='sm:text-sm text-'>{benefit.explaination}</p>
+                      <p className='sm:text-sm text-sm'>{benefit.explaination}</p>
                     </div>
                   </div>
                 </>
@@ -65,7 +64,6 @@ const Benefits = () => {
             </div>
           </div>
           
-        </div>
       </div>
     </section>
   )
