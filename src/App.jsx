@@ -26,12 +26,12 @@ const App = () => {
           <Hero/>
         </div>
       </div>
-      <div className={`blob-container ${isMobile ? 'procedure_blob_mobile' : 'procedure_blob'}`} id='procedure'>
+      <div className={`blob-container ${isMobile ? 'procedure_blob_mobile' : 'procedure_blob'}`}>
       </div>
         <Procedure/>
-      <div id='benefits'>
-        <Benefits/>
+      <div className={`blob-container ${isMobile? "benefits_blob_mobile" : "benefits_blob_mobile"}`}>
       </div>
+        <Benefits/>
         <AboutUs/>
         <WhyUs/>
         <Order/>

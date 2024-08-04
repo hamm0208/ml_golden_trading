@@ -26,5 +26,5 @@ export {
   manpower,
   nature,
   time,
-  demo_vid
+  demo_vid,
 };
