@@ -7,7 +7,11 @@ import {
     save_cost,
     manpower,
     nature,
-    time
+    time,
+    flooring_1,
+    flooring_2,
+    flooring_3,
+    flooring_4,
 } from "../assets";
 
 export const navLinks = [
@@ -20,8 +24,8 @@ export const navLinks = [
         title: "Benefits",
     },
     {
-        id: "aboutus",
-        title: "About Us",
+        id: "work",
+        title: "Our Work",
     },
     {
         id: "whyus",
@@ -95,4 +99,10 @@ const benefits = [
     },
 ] 
 
-export { procedure, benefits };
+const work = [
+    flooring_1,
+    flooring_2,
+    flooring_3,
+    flooring_4,
+]
+export { procedure, benefits, work };

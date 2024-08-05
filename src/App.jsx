@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom"
-import { AboutUs, Benefits, Footer, Hero, Navbar, Order, Procedure, WhyUs} from "./components"
+import { Works, Benefits, Footer, Hero, Navbar, Order, Procedure, WhyUs} from "./components"
 import React, { useState, useEffect } from 'react';
 
 const App = () => {
@@ -29,10 +29,10 @@ const App = () => {
       <div className={`blob-container ${isMobile ? 'procedure_blob_mobile' : 'procedure_blob'}`}>
       </div>
         <Procedure/>
-      <div className={`blob-container ${isMobile? "benefits_blob_mobile" : "benefits_blob_mobile"}`}>
+      <div className={`blob-container "benefits_blob_mobile"}`}>
       </div>
         <Benefits/>
-        <AboutUs/>
+        <Works/>
         <WhyUs/>
         <Order/>
         <div className="footer">

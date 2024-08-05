@@ -1,5 +1,5 @@
 import {Product1Canvas} from "./canvas"
-import AboutUs from "./AboutUs"
+import Works from "./Works"
 import Benefits from "./Benefits"
 import Footer from "./Footer"
 import Hero from "./Hero"
@@ -10,7 +10,7 @@ import WhyUs from "./WhyUs"
 
 export {
     Product1Canvas,
-    AboutUs,
+    Works,
     Benefits,
     Footer,
     Hero,
