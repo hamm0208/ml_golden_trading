@@ -56,7 +56,7 @@ const AboutUs = () => {
           Our <span className='lilita text-secondary'>Work!</span>
         </h2>
       </div>
-      <div className='mt-5 grid grid-cols-9 h-[20rem] md:h-[36rem] px-5  w-screen'>
+      <div {...handlers} className='mt-5 grid grid-cols-9 h-[20rem] md:h-[36rem] px-5  w-screen'>
         <div className='col-span-1 justify-center items-center md:flex hidden mr-3'>
           <button onClick={prevSlide} className='bg-gray-800 text-white p-2 w-20 h-24 rounded-lg' id='prev'>&lt;</button>
         </div>
