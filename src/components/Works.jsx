@@ -48,7 +48,7 @@ const AboutUs = () => {
         </h2>
       </div>
       <div className='mt-5 grid grid-cols-9 h-[20rem] md:h-[36rem] px-5'>
-        <div className='col-span-1 justify-center items-center md:flex hidden'>
+        <div className='col-span-1 justify-center items-center md:flex hidden mr-3'>
           <button onClick={prevSlide} className='bg-gray-800 text-white p-2 w-20 h-24 rounded-lg' id='prev'>&lt;</button>
         </div>
         <div className='md:col-span-7 col-span-9 relative flex justify-center items-center'>
@@ -67,7 +67,7 @@ const AboutUs = () => {
           ))}
 
         </div>
-        <div className='col-span-1 justify-center items-center md:flex hidden'>
+        <div className='col-span-1 justify-center items-center md:flex hidden ml-3'>
           <button onClick={nextSlide} className='bg-gray-800 text-white p-2 w-20 h-24 rounded-lg' id='next'>&gt;</button>
         </div>
       </div>
