@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { work } from "../constants";
+import { useSwipeable } from 'react-swipeable';
 
 const AboutUs = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -39,6 +40,14 @@ const AboutUs = () => {
     startInterval();
     return () => clearExistingInterval();
   }, []);
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => nextSlide(),
+    onSwipedRight: () => prevSlide(),
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true,
+  });
+
 
   return (
     <section id='work' className='py-10'>
