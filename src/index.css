@@ -50,3 +50,7 @@
 .benefits_blob_mobile{
     background-image: url("./assets/benefits_bg_mobile.svg");
 }
+
+.list{
+    z-index: -2;
+}
