@@ -41,13 +41,13 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <section id='work' className='p-10 h-full'>
-      <div className='px-14 flex flex-col justify-center items-center'>
+    <section id='work' className='py-10'>
+      <div className='px-14 text-center'>
         <h2 className='text-5xl lilita'>
           Our <span className='lilita text-secondary'>Work!</span>
         </h2>
       </div>
-      <div className='mt-5 grid grid-cols-9 h-[20rem] md:h-[36rem] px-5'>
+      <div className='mt-5 grid grid-cols-9 h-[20rem] md:h-[36rem] px-5  w-screen'>
         <div className='col-span-1 justify-center items-center md:flex hidden mr-3'>
           <button onClick={prevSlide} className='bg-gray-800 text-white p-2 w-20 h-24 rounded-lg' id='prev'>&lt;</button>
         </div>
@@ -61,7 +61,7 @@ const AboutUs = () => {
               <img
                 src={image}
                 alt={`work-image-${index}`}
-                className='h-72 md:w-[70rem] md:h-[35rem] my-2 px-2'
+                className='w-[650px] h-[325px] md:w-[70rem] md:h-[35rem] my-2 px-2'
               />
             </div>
           ))}
