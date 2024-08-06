@@ -56,7 +56,7 @@ const AboutUs = () => {
           Our <span className='lilita text-secondary'>Work!</span>
         </h2>
       </div>
-      <div {...handlers} className='mt-5 grid grid-cols-9 h-[20rem] md:h-[36rem] px-5  w-screen'>
+      <div {...handlers} className='mt-5 grid grid-cols-9 h-[20rem] md:h-[36rem] px-5 w-full'>
         <div className='col-span-1 justify-center items-center md:flex hidden mr-3'>
           <button onClick={prevSlide} className='bg-gray-800 text-white p-2 w-20 h-24 rounded-lg' id='prev'>&lt;</button>
         </div>
@@ -68,9 +68,9 @@ const AboutUs = () => {
               className={`list absolute flex transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'} bg-primary rounded-lg`}
             >
               <img
-                src={image}
+                src={image.image}
                 alt={`work-image-${index}`}
-                className='w-[650px] h-[325px] md:w-[70rem] md:h-[35rem] my-2 px-2'
+                className={` ${image.aspect == "16:9" ? 'md:w-[70rem] md:h-[35rem] w-[650px] h-[325px] ' : 'w-[25rem] h-[25rem] md:w-[35rem] md:h-[35rem] '} my-2 px-2 relative` }
               />
             </div>
           ))}

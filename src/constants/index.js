@@ -12,6 +12,7 @@ import {
     flooring_2,
     flooring_3,
     flooring_4,
+    install
 } from "../assets";
 
 export const navLinks = [
@@ -100,9 +101,25 @@ const benefits = [
 ] 
 
 const work = [
-    flooring_1,
-    flooring_2,
-    flooring_3,
-    flooring_4,
+    {
+        image: flooring_1,
+        aspect: "16:9"
+    },
+    {
+        image: flooring_2,
+        aspect: "16:9"
+    },
+    {
+        image: flooring_3,
+        aspect: "16:9"
+    },
+    {
+        image: flooring_4,
+        aspect: "16:9"
+    },
+    {
+        image: install,
+        aspect: "16:9"
+    },
 ]
 export { procedure, benefits, work };

@@ -4,7 +4,7 @@ const Benefits = () => {
   
   return (
     <section>
-      <div className='relative w-full h-full  z-0 benefits mt-16 bg-primary p-10'  id="benefits">
+      <div className='relative w-full h-full  z-0 benefits mt-20 bg-primary p-10'  id="benefits">
           <div className='2xl:text-left  2xl:w-full flex flex-col 2xl:justify-start 2xl:items-start justify-center items-center'>
             <h2 className='text-5xl lilita text-secondary'>Benefits</h2>
             <h3 className='text-2xl lilita text-white'>How can we help you?</h3>

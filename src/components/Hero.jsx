@@ -21,7 +21,7 @@ const Hero = () => {
 
   return (
     <section className='relative w-full h-screen mx-auto'>
-      <div className={`absolute inset-0 sm:top-[5%] md:top-[10%] lg:top= top-[5%] mx-auto flex lg:flex-row flex-col justify-center items-center gap-10`}>
+      <div className={`absolute inset-0 sm:top-[5%] md:top-[10%] lg:top= top-[5%] mx-auto flex lg:flex-row flex-col justify-center items-center gap-10 `}>
         <div className='lg:w-5/6 w-full flex flex-col justify-center items-center lg:bg-transparent home p-6 rounded-xl landing'>
           <h1 className='text-white text-3xl xl:text-5xl text-center'>
             Transform Your Ground Leveling with our <br/>
@@ -36,7 +36,7 @@ const Hero = () => {
               Explore Now
           </a>
         </div>
-        <div className='product h-full lg:w-1/3 lg:top-0 top-1/4 lg:relative absolute w-full mr-5'>
+        <div className='product h-full lg:w-1/3 lg:top-0  lg:relative absolute w-full mr-5 '>
           <div className='w-full h-full absolute lg:z-0 z-10'></div>
           <Product1Canvas/>
         </div>
