@@ -24,7 +24,7 @@ const Product1 = ({ isMobile }) => {
       <primitive
         ref={meshRef}
         object={scene}
-        position={isMobile?[0, -1.5, 0] :[0, -3, 0]}
+        position={isMobile?[0, -1.5, 0] :[0, -4.5, 0]}
         scale={isMobile? 9:10}
         rotation={[0, 0.5, 0]}
       />
