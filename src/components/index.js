@@ -4,7 +4,7 @@ import Benefits from "./Benefits"
 import Footer from "./Footer"
 import Hero from "./Hero"
 import Navbar from "./Navbar"
-import Order from "./Order"
+import Contact from "./Contact"
 import Procedure from "./Procedure"
 import AboutUs from "./AboutUs"
 
@@ -15,7 +15,7 @@ export {
     Footer,
     Hero,
     Navbar,
-    Order,
+    Contact,
     Procedure,
     AboutUs
 }

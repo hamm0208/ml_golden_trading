@@ -4,7 +4,7 @@ import {about, patent} from "../constants"
 const About = () => {
   return (
     <section id='about' className='h-full mt-10 px-5'>
-      <div className='flex justify-center 2xl:items-start items-center flex-col'>
+      <div className='flex justify-center items-center flex-col'>
         <h2 className='text-5xl lilita 2xl:text-left text-center'>About <br className='md:hidden block'/><span className= 'lilita text-secondary '>ML GOLDEN TRADING!</span></h2>
         <div className='flex md:flex-row flex-col p-5 mt-3 bg-primary w-fit rounded-lg text-white'>
           {
@@ -32,13 +32,10 @@ const About = () => {
       </div>
 
       <div className='mt-7'>
-        <h3 className='text-4xl lilita 2xl:text-left text-center'>Business Overview</h3>
-        <div className='p-4 rounded-lg border-2   border-black mt-1 '>
-        <p
-          className=''
-          dangerouslySetInnerHTML={{ __html: about[0].comment.replace(/\n/g, '<br>') }}
-        ></p>
-      </div>
+        <h2 className='text-5xl lilita text-center'>Our Factory</h2>
+        <p className=''>
+          <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1fbLayoKUbUJfXjFoMfcap1MplHnayHY&ehbc=2E312F"  className='map mx-auto mt-3'></iframe>
+        </p>
       </div>
 
       

@@ -147,13 +147,6 @@ ML Golden Trading (M) Sdn. Bhd. (202201016344 (1462041-X)) is a company that has
 The Flat Floor System will replace the conventional ways of achieving ground levelling. Using this technology, the ground no longer needs to be levelled, bringing unprecedented technological breakthroughs to construction projects and making it faster and easier for craftsmen to complete the ground levelling task. \n
 It represents a great evolution in construction technology to bring many benefits and advantages to builders, including reducing construction costs, reducing labor costs, expediting project progress, and diminishing construction pollution.`,
         image: about1
-    },
-    {
-        comment:`
-ML Golden Trading (M) Sdn. Bhd., established in 2020, is a company that has successfully developed the flat floor system. Its current business involves producing and supplying system devices to building contractors. \n
-Our exclusive and pioneering technology, such as self-levelling cement screeding or cement mortar screeding, can be used to replace conventional ground levelling methods. Offering unprecedented break- throughs at ground level, it is now widely used by many building contractors. \n
-The developer of this technology. William Kua, is also the founder of ML Golden Trading (M) Sdn. Bhd. A ground expert in the indus- try, he has more than 30 years of experience in ground engineering. It took him seven years to develop this innovative technology to replace conventional ground levelling methods.`,
-        image: about2
     }
 ]
 export { procedure, benefits, work, about, patent };
