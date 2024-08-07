@@ -55,11 +55,13 @@ const Navbar = () => {
 
     const element = document.getElementById(link.id);
     if (element) {
-      var yOffset = -100;
+      var yOffset = -120;
       if(link.id == "benefits"){
         yOffset = -150
       }else if(link.id == "work"){
         yOffset = -170
+      }else if(link.id == "about"){
+        yOffset = -200
       }
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });

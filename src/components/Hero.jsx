@@ -10,10 +10,7 @@ const Hero = () => {
 
     const element = document.getElementById(link.id);
     if (element) {
-      var yOffset = -100;
-      if(link.id == "benefits"){
-        yOffset = -150
-      }
+      var yOffset = -120;
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }

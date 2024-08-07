@@ -61,7 +61,7 @@ const AboutUs = () => {
         <div className='col-span-1 justify-center items-center md:flex hidden mr-3'>
           <button onClick={prevSlide} className='bg-gray-800 text-white p-2 w-20 h-24 rounded-lg' id='prev'>&lt;</button>
         </div>
-        <div className='md:col-span-7 col-span-9 relative flex justify-center items-center'>
+        <div className='md:col-span-7 col-span-9 relative flex justify-center items-center list'>
 
           {work.map((image, index) => (
             <div

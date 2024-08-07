@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom"
-import { Works, Benefits, Footer, Hero, Navbar, Order, Procedure, WhyUs} from "./components"
+import { Works, Benefits, Footer, Hero, Navbar, Order, Procedure, AboutUs} from "./components"
 import React, { useState, useEffect } from 'react';
 
 const App = () => {
@@ -33,7 +33,7 @@ const App = () => {
       </div>
         <Benefits/>
         <Works/>
-        <WhyUs/>
+        <AboutUs/>
         <Order/>
         <div className="footer">
           <Footer/>

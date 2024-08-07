@@ -6,7 +6,7 @@ import Hero from "./Hero"
 import Navbar from "./Navbar"
 import Order from "./Order"
 import Procedure from "./Procedure"
-import WhyUs from "./WhyUs"
+import AboutUs from "./AboutUs"
 
 export {
     Product1Canvas,
@@ -17,5 +17,5 @@ export {
     Navbar,
     Order,
     Procedure,
-    WhyUs
+    AboutUs
 }
