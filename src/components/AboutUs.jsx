@@ -25,7 +25,7 @@ const About = () => {
           
         </div>
       </div>
-      <div className='p-4 rounded-lg border-2 bg-secondary  border-black mt-5 '>
+      <div className='p-4 rounded-lg border-2 bg-secondary  border-black mt-5 w-[70vw] mx-auto'>
         <p
           dangerouslySetInnerHTML={{ __html: about[0].comment.replace(/\n/g, '<br>') }}
         ></p>
@@ -34,7 +34,7 @@ const About = () => {
       <div className='mt-7'>
         <h2 className='text-5xl lilita text-center'>Our Factory</h2>
         <p className=''>
-          <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1fbLayoKUbUJfXjFoMfcap1MplHnayHY&ehbc=2E312F"  className='map mx-auto mt-3'></iframe>
+          <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1fbLayoKUbUJfXjFoMfcap1MplHnayHY&ehbc=2E312F"  className='map mx-auto mt-3 md:w-[50vw] w-[90vw]  h-[60vh]'></iframe>
         </p>
       </div>
 

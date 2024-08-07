@@ -32,6 +32,7 @@ const App = () => {
       <div className={`blob-container "benefits_blob_mobile"}`}>
       </div>
         <Benefits/>
+        
         <Works/>
         <hr className="border-2"/>
         <AboutUs/>
