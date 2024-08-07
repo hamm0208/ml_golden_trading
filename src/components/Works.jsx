@@ -23,6 +23,7 @@ const AboutUs = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % work.length);
     startInterval();
   };
+  
 
   const prevSlide = () => {
     clearExistingInterval();
@@ -70,7 +71,7 @@ const AboutUs = () => {
               <img
                 src={image.image}
                 alt={`work-image-${index}`}
-                className={` ${image.aspect == "16:9" ? 'md:w-[70rem] md:h-[35rem] w-[650px] h-[325px] ' : 'w-[25rem] h-[25rem] md:w-[35rem] md:h-[35rem] '} my-2 px-2 relative` }
+                className={` ${image.aspect == "16:9" ? 'md:w-[70rem] md:h-[35rem] w-[650px] h-[325px] ' : 'w-[20rem] h-[20rem] md:w-[35rem] md:h-[35rem] '} my-2 px-2 relative` }
               />
             </div>
           ))}

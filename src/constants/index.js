@@ -119,7 +119,7 @@ const work = [
     },
     {
         image: install,
-        aspect: "16:9"
+        aspect: "9:16"
     },
 ]
 export { procedure, benefits, work };
