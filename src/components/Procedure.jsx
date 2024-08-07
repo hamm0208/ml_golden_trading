@@ -6,7 +6,7 @@ import {demo_vid} from "../assets"
 const Procedure = () => {
   return (
     <section className='relative w-full h-full lg:mb-40 3xl:mb-20 xl:mb-0 mb-0 procedure'  id='procedure'>
-      <div className={`p-14 flex 2xl:flex-row flex-col relative inset-0 3xl:top-[5rem] 2xl:top-[12.5rem] lg:top-[10rem] md:top-[5rem] top-[40px] pt-10 items-center`}>
+      <div className={`p-14 flex 2xl:flex-row flex-col relative inset-0 3xl:top-[2rem] 2xl:top-[6rem] lg:top-[8rem] md:top-[5rem] top-[40px] pt-10 items-center`}>
         <div className='2xl:text-left text-center 2xl:w-full flex flex-col 2xl:justify-start 2xl:items-start justify-center items-center'>
           <h2 className='text-5xl lilita'>How It <span className= 'lilita text-secondary '>Works!</span></h2>
           <br />
