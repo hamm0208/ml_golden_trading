@@ -19,6 +19,7 @@ import malaysia from "./malaysia.svg";
 import singapore from "./singapore.svg";
 import about1 from "./about_1.jpg"
 import about2 from "./about_2.jpg"
+import whatsapp from "./WhatsAppButtonWhiteMedium.svg"
 
 export {
   background_mobile,
@@ -41,5 +42,6 @@ export {
   malaysia,
   singapore,
   about1,
-  about2
+  about2,
+  whatsapp
 };

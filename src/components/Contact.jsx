@@ -1,9 +1,9 @@
 import React from 'react'
-import {company_circle, company_square} from "../assets/index";
+import {company_circle, company_square, whatsapp} from "../assets/index";
 
 const Contact = () => {
   return (
-    <section id='contact' className='h-full mt-10 px-5'>
+    <section id='contact' className='h-full my-10 px-5 '>
       <div>
         <h2 className='text-5xl lilita text-center text-secondary'>Contact Us!</h2>
         <h3 className='text-2xl lilita text-center text-primary'>Get in Touch</h3>
@@ -42,6 +42,9 @@ const Contact = () => {
               <span className='text-secondary'>Penang address:</span><br />
               No, 1337, Jalan Tasik Valdor Ria 14200 S.P.S Penang
             </p>
+            <a href="https://wa.me/+601155573863" aria-label="Chat on WhatsApp" className='mt-5 xl:mx-0 mx-auto '><img alt="Chat on WhatsApp" src={whatsapp} /></a>
+
+            
           </div>
         </div>
         <div className='lg:w-1/2 w-full'>
