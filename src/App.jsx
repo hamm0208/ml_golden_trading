@@ -36,6 +36,8 @@ const App = () => {
         <Works/>
         <hr className="border-2"/>
         <AboutUs/>
+        <hr className="border-2 mt-10"/>
+
         <Contact/>
         <div className="footer">
           <Footer/>
