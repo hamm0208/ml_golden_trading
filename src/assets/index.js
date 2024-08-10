@@ -21,6 +21,10 @@ import about1 from "./about_1.jpg"
 import about2 from "./about_2.jpg"
 import whatsapp from "./WhatsAppButtonWhiteMedium.svg"
 
+import work_video from "./work/work_video.mp4"
+import work1 from "./work/work1.jpg"
+import work2 from "./work/work2.jpg"
+
 export {
   background_mobile,
   background,
@@ -43,5 +47,8 @@ export {
   singapore,
   about1,
   about2,
-  whatsapp
+  whatsapp,
+  work_video,
+  work1,
+  work2
 };

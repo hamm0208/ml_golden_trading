@@ -16,7 +16,9 @@ import {
     malaysia,
     singapore,
     about1,
-    about2
+    work_video,
+    work1,
+    work2
 } from "../assets";
 
 export const navLinks = [
@@ -106,25 +108,46 @@ const benefits = [
 
 const work = [
     {
-        image: flooring_1,
+        type: "Image",
+        src: work1,
         aspect: "16:9"
     },
     {
-        image: flooring_2,
-        aspect: "16:9"
-    },
-    {
-        image: flooring_3,
-        aspect: "16:9"
-    },
-    {
-        image: flooring_4,
-        aspect: "16:9"
-    },
-    {
-        image: install,
+        type: "Image",
+        src: work2,
         aspect: "9:16"
     },
+    {
+        type: "Video",
+        src: work_video,
+        aspect: "9:16"
+    },
+    {
+        type: "Image",
+        src: flooring_1,
+        aspect: "16:9"
+    },
+    {
+        type: "Image",
+        src: flooring_2,
+        aspect: "16:9"
+    },
+    {
+        type: "Image",
+        src: flooring_3,
+        aspect: "16:9"
+    },
+    {
+        type: "Image",
+        src: flooring_4,
+        aspect: "16:9"
+    },
+    {
+        type: "Image",
+        src: install,
+        aspect: "9:16"
+    },
+    
 ]
 
 const patent = [

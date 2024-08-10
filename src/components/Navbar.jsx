@@ -55,21 +55,14 @@ const Navbar = () => {
 
     const element = document.getElementById(link.id);
     if (element) {
-      var yOffset = -120;
-      if(link.id == "benefits"){
-        yOffset = -150
-      }else if(link.id == "work"){
-        yOffset = -170
-      }else if(link.id == "about"){
-        yOffset = -200
-      }
+      var yOffset = -0;
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
   };
 
   return (
-    <nav className={`w-full flex-items-center py-5  fixed top-0 z-50 bg-primary`}>
+    <nav className={`w-full flex-items-center py-5  relative top-0 z-50 bg-primary`}>
       <div className='w-full flex justify-between items-center  max-w-7xl mx-auto'>
         <div className='flex justify-center items-center mr-5 md:w-60 w-full '>
           <Link 

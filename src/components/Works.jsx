@@ -4,43 +4,32 @@ import { useSwipeable } from 'react-swipeable';
 
 const AboutUs = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const intervalRef = useRef(null);
-
-  const startInterval = () => {
-    intervalRef.current = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % work.length);
-    }, 4000);
-  };
-
-  const clearExistingInterval = () => {
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-    }
-  };
+  const videoRefs = useRef([]); // Array to hold multiple video refs
+  useEffect(() => {
+    // Pause all videos
+    videoRefs.current.forEach((video, index) => {
+      if (video) {
+        video.pause();
+        if (index === currentSlide && work[currentSlide].type === "Video") {
+          video.currentTime = 0; // Reset the video to the start
+          video.volume = 0.05 ;
+          video.play(); // Play the current video
+        }
+      }
+    });
+  }, [currentSlide]);
 
   const nextSlide = () => {
-    clearExistingInterval();
     setCurrentSlide((prevSlide) => (prevSlide + 1) % work.length);
-    startInterval();
   };
-  
 
   const prevSlide = () => {
-    clearExistingInterval();
     setCurrentSlide((prevSlide) => (prevSlide - 1 + work.length) % work.length);
-    startInterval();
   };
 
   const goToSlide = (index) => {
-    clearExistingInterval();
     setCurrentSlide(index);
-    startInterval();
   };
-
-  useEffect(() => {
-    startInterval();
-    return () => clearExistingInterval();
-  }, []);
 
   const handlers = useSwipeable({
     onSwipedLeft: () => nextSlide(),
@@ -49,12 +38,12 @@ const AboutUs = () => {
     trackMouse: true,
   });
 
-
   return (
     <section id='work' className='py-10'>
       <div className='px-14 text-center'>
         <h2 className='text-5xl lilita'>
           Our <span className='lilita text-secondary'>Work!</span>
+          
         </h2>
       </div>
       <div {...handlers} className='mt-5 grid grid-cols-9 h-[20rem] md:h-[36rem] px-5 w-full'>
@@ -62,17 +51,36 @@ const AboutUs = () => {
           <button onClick={prevSlide} className='bg-gray-800 text-white p-2 w-20 h-24 rounded-lg' id='prev'>&lt;</button>
         </div>
         <div className='md:col-span-7 col-span-9 relative flex justify-center items-center list'>
-
+        
           {work.map((image, index) => (
             <div
               key={index}
-              className={`list absolute flex transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'} bg-primary rounded-lg`}
+              className={`list absolute flex transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'} rounded-lg bg-primary`}
             >
-              <img
-                src={image.image}
-                alt={`work-image-${index}`}
-                className={` ${image.aspect == "16:9" ? 'md:w-[70rem] md:h-[35rem] w-[650px] h-[325px] ' : 'w-[20rem] h-[20rem] md:w-[35rem] md:h-[35rem] '} my-2 px-2 relative` }
-              />
+              {image.type == "Image" ? 
+              <>
+                <img
+                  src={image.src}
+                  alt={`work-image-${index}`}
+                  className={` ${image.aspect == "16:9" ? 'md:w-[70rem] md:h-[35rem] w-[650px] h-[325px] ' : 'w-[20rem] h-[20rem] md:w-[35rem] md:h-[35rem] '} my-2 px-2 relative work_image` }
+                />
+              </> :
+              <>
+                <video
+                  ref={(el) => (videoRefs.current[index] = el)} // Store ref to video element
+                  src={image.src}
+                  loop
+                  autoPlay
+                  
+                  
+                  preload="auto"
+                  className={` ${image.aspect === "16:9" ? 'md:w-[70rem] md:h-[35rem] w-[650px] h-[325px]' : 'w-[20rem] h-[20rem] md:w-[35rem] md:h-[35rem]'} relative work_image`}
+                >
+                  Your browser does not support the video tag.
+                </video>
+              </>
+              }
+             
             </div>
           ))}
 
