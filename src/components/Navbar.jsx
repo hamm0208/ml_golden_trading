@@ -62,7 +62,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`w-full flex-items-center py-5  relative top-0 z-50 bg-primary`}>
+    <nav className={`w-full flex-items-center py-5  absolute top-0 z-50 bg-primary`}>
       <div className='w-full flex justify-between items-center  max-w-7xl mx-auto'>
         <div className='flex justify-center items-center mr-5 md:w-60 w-full '>
           <Link 
